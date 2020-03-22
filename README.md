@@ -86,13 +86,14 @@
                 component:account，
                 children:[
                     {
-                        { path:'/login',component:login }
-                        { path:'/register',component:register }
+                        { path:'login',component:login }
+                        { path:'register',component:register }
                     }
                 ]}
         ]
     })
 
+    命名视图路由
     router-view
 
 
