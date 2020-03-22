@@ -64,8 +64,34 @@
 
 路由：
     router-link
+    参数匹配方式：query
     <router-link to="home?id=10&name=张三" tag="span">Home</router-link>
-    参数匹配两种方式：query params
+    参数匹配方式：params
+    <router-link to="home/10/张三" tag="span">Home</router-link>
+
+    路由写法
+    var router = new VueRouter({
+        routes: [
+            { path:'/account',component:account }
+            { path:'/login',component:login }
+            { path:'/register',component:register }
+        ]
+    })
+
+    路由嵌套写法
+    var router = new VueRouter({
+        routes: [
+            { 
+                path:'/account',
+                component:account，
+                children:[
+                    {
+                        { path:'/login',component:login }
+                        { path:'/register',component:register }
+                    }
+                ]}
+        ]
+    })
 
     router-view
 
