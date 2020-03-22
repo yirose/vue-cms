@@ -63,6 +63,8 @@
     })
 
 路由：
+后端路由、前端路由
+
     router-link
     参数匹配方式：query
     <router-link to="home?id=10&name=张三" tag="span">Home</router-link>
@@ -95,11 +97,30 @@
 
     命名视图路由
     router-view
+    <router-view><router-view>
+    <div class="container">
+        <router-view name="left"><router-view>
+        <router-viewname="main"><router-view>
+    </div>
 
+    路由写法
+    var router = new VueRouter({
+        routes: [
+            { path:'/',components:
+                {
+                    'default': header,
+                    'left': leftbox,
+                    'main': mainbox
+                }
+            } 
+        ]
+    })
 
-后端路由：
+监听事件
+原生 onclick(click) onkeyup(keyup) ……
 
-前端路由：
-
+监听属性：watch         操作隐含的路由……
+方法属性：methods   大量业务逻辑
+计算属性：computed  简单数据操作
 
 
