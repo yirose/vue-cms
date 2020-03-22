@@ -1,7 +1,7 @@
 # vue-cms
 
-Vue 指令：
 默认内置的指令:
+
     v-bind      缩写 ：
     v-on        缩写 @
     修饰符: .stop .prevent .capture .self .once .passive
@@ -21,7 +21,7 @@ Vue 指令：
     v-cloak
     v-once
 
-定义私有组件：
+自定义指令：
     
     注册一个全局自定义指令 `v-focus`
     Vue.directive('focus', {
@@ -47,9 +47,28 @@ Vue 指令：
     }
     }
 
+    钩子函数
 
+组件：
+    全局注册
+    Vue.component(’组件的名称‘，’组件的模板对象‘)
+
+    局部注册
+    new Vue({
+        el: '#app',
+        components: {
+            '组件的名称': 组件的模板对象,
+            'component-b': ComponentB
+        }
+    })
 
 路由：
+    router-link
+    <router-link to="home?id=10&name=张三" tag="span">Home</router-link>
+    参数匹配两种方式：query params
+
+    router-view
+
 
 后端路由：
 
