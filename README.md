@@ -123,4 +123,89 @@
 方法属性：methods   大量业务逻辑
 计算属性：computed  简单数据操作
 
+data：  存放私有数据
+props： 存放父子组件传递数据
+Vuex：  存放共享数据
+
+
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+// Vuex 实例
+var store = new Vuex.Store({
+    // 跟实例中的date
+    state{
+        ……
+    },
+    // 跟实例中的methods
+    mutations{
+        ……
+    },
+    getters{
+
+    }
+})
+
+Vue 生命周期
+    开始初始化
+    beforeCreate（加载前）
+    初始化注入&校验
+    created（加载）
+    beforeMount（挂载前）
+    创建vm.$el 并用其替换 ‘el'
+    mounted（挂载）
+    挂在完毕
+    当data被修改
+    beforeUpdate（渲染前）
+    虚拟DOM重新渲染并应用跟新
+    updated（数据绑定渲染）
+    beforeDestroy（销毁前）
+    销毁完毕
+    destroyed（销毁）
+
+
+
+
+
+test 组件
+
+导航
+Card
+MainService
+current
+saving
+Balance
+Tramsaction
+
+
+1、需求分析
+    需求文档
+    原型图 （工具：axure 墨刀）
+
+2、概要设计
+    数据库表设计（ER图， 表结构）
+        ER图(Entity Relationship Diagram 也称实体-联系图)基本步骤
+        1、实体
+        2、关系
+        3、字段 ERDPlus
+    建表步骤
+    1、一个实体一张表
+    2、多对多关系一张表
+    3、一对一、一对多、多对多、外键
+    4、约束（主键、外键、索引、唯一、非空、默认值）
+        拆表(常用字段，不常用字段分表)
+
+3、详细设计
+4、编码
+5、测试
+6、部署实施
+7、运维
+
+
+敏捷开发 
+scrum 迭代周期 开发周期：2周 sprint
+ 
+2天做需求 6-8天做开发  1-2天测试上线
+
+
 
