@@ -148,9 +148,9 @@ var store = new Vuex.Store({
 
 Vue 生命周期
     开始初始化
-    beforeCreate（加载前）
+    beforeCreate（创建前）
     初始化注入&校验
-    created（加载）
+    created（创建）
     beforeMount（挂载前）
     创建vm.$el 并用其替换 ‘el'
     mounted（挂载）
